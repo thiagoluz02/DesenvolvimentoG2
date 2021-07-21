@@ -47,4 +47,9 @@
   margin-right: 10px;
   color: white;
   align-items: center;
+}.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }

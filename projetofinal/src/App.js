@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Countries from "./components/Countries";
 import Header from "./components/Header";
-import css from "./components/module.css"
+import css from "./components/module.css";
+//import 'materialize-css/dist/css/materialize.min.css';
 
 export default function App() {
   const [allCountries, setAllCountries] = useState([])
@@ -14,11 +15,11 @@ export default function App() {
       const res = await fetch("https://restcountries.eu/rest/v2/all");
       const json = await res.json();
 
-      let allCountries = json.map(({ name, numericCode,topLevelDomain ,flag, population, capital }) => {
+      let allCountries = json.map(({ name, numericCode ,flag, population, capital }) => {
         return {
           id: numericCode,
           name,
-          topLevelDomain,
+          
           filterName: name.toLowerCase(),
           flag,
           population,
@@ -67,7 +68,8 @@ export default function App() {
         totalPopulation={filteredPopulation}
         onChangeFilter={handleChangeFilter}
       />
-      <Countries countries={filteredCountries} />
+      <div><Countries countries={filteredCountries} /></div>
+     
     </div>
   );
 };

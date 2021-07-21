@@ -4,6 +4,7 @@ import { formatNumber } from "./helpers/formatHelpers";
 import css from "./module.css";
 
 export default class Header extends Component {
+  //essa parte seria cabeçalho  poderia ter feito junto  mais como trabalho com botão
   // handleInputChange=(evt)=>{
   //     // console.log(evt.target.value)
   //     const newText = evt.target.value
@@ -20,6 +21,11 @@ export default class Header extends Component {
       totalPopulation,
       onChangeFilter,
     } = this.props;
+    if( !filter){
+     
+    }if(filter.value === 0 ){
+      return<h4>Nenhum Pais Foi encontrado com esse filtro.</h4>;
+    }
     return (
       <div className={css.flexRow}>
         <div class="input-field col s12">
@@ -37,12 +43,16 @@ export default class Header extends Component {
           {countryCount > 1 ? "Países" : "País"} :{"  "}
           <strong>{countryCount}</strong>
         </span>{" "}
+        <ul>
         <span className={css.separator}>|</span>{"  "}
         <span className={css.population}>
           População : <strong>{formatNumber(totalPopulation)} </strong>
         </span>
+        </ul>
+       
       </div>
     );
+   
   }
 }
 
