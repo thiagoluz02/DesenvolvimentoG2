@@ -68,7 +68,7 @@ export default function App() {
         totalPopulation={filteredPopulation}
         onChangeFilter={handleChangeFilter}
       />
-      <div><Countries countries={filteredCountries} /></div>
+      <div ><Countries countries={filteredCountries} /></div>
      
     </div>
   );

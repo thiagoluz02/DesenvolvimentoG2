@@ -33,6 +33,7 @@
 }
 
 .countries {
+  display: flex; 
   min-width: 80px;
   margin-left: 1px;
   margin-right: 10px;
@@ -52,4 +53,16 @@
   width: 33.33%;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
+}
+.flex-container {
+  display: flex;
+  border-radius: 200px
+}
+.border{
+  display: flex;
+  border-radius: 200px
+}
+img {
+  width: 200px;
+  height: 200px;
 }
